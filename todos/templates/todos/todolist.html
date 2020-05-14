@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+<h1>View All ToDos</h1>
+</div>
+  <div class="row justify-content-center">
+  <ul class="list-group">
+  {% for todo in todos %}
+    <li class="list-group-item m-3">
+        <div class="container">
+            <div class="row justify-content-between">
+            <h3>{{ todo.title }}</h3>
+            <div>
+            <span>
+                <button type="button" class="btn btn-primary">
+                    <i class="far fa-edit"></i>
+                Edit
+                </button>
+            </span>
+            <span>
+                <button type="button" class="btn btn-danger">
+                    <i class="far fa-trash-alt"></i>
+                        Delete
+                </button>
+            </span>
+            </div>
+            </div>
+        </div
+        <p>{{ todo.description }}</p>
+        <br>
+        <p>{{ todo.start_time }}</p>
+    </li
+    
+  {% endfor %}
+  </ul>
+</div>
+
+</div>
+{% endblock %}

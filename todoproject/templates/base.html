@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <Link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  {% block stylesheet %}
+  {% endblock %}
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+  {% comment %} you are very basic
+<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div> {% endcomment %}
+{% block content %}
+{% endblock %}
+  </body>
+</html>
